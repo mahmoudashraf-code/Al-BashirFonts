@@ -10,7 +10,7 @@ app.use("/api/blog", require("./router/blog"));
 
 
 app.get("/*", (req, res) => {
-    res.sendFile(join(__dirname, "dist", "index.html"));
+    res.sendFile(join(__dirname, "test", "index.html"));
 })
 
 app.listen(port, () => {
