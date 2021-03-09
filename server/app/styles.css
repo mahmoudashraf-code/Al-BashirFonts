@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+.button {
+  font-family: Roboto, sans-serif;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 1px 6px rgba(57, 73, 76, 0.25);
+  color: #fff;
+  width: 100px;
+  background-color: #359900;
+}
+.button:hover {
+  background-color: #008329;
+}
+.button:active {
+  background-color: #008329;
+  box-shadow: 0 0 #666;
+  transform: translateY(1px);
+}
+.button.danger {
+  background-color: #9b2017;
+}
+.button.danger:active {
+  background-color: #ac2015;
+}
+.button.danger:hover {
+  background-color: #ac2015;
+}
+.formItem {
+  display: flex;
+  border: 1px solid #d9e1e1bd;
+  margin: 7px 0;
+}
+.formItem input {
+  flex: 1;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  padding: 3px;
+}
+.formItem label {
+  background: #b4c0c9;
+  padding: 3px;
+  width: 73px;
+  text-align: center;
+  box-shadow: 0 0 2px;
+}
+ul.buttonGroup li {
+  display: inline-block;
+  padding: 5px 8px;
+  fill: white;
+}
+ul.buttonGroup li:hover {
+  background: #ffffff24;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+svg.logo,
+img.logo {
+  width: 25px;
+  height: 25px;
+}
+body,
+html {
+  -webkit-user-select: none;
+          user-select: none;
+  height: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map*/

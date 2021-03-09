@@ -5,12 +5,12 @@ let port = 3000 || process.env.PORT;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("test"));
+app.use(express.static("app"));
 app.use("/api/blog", require("./router/blog"));
 
 
 app.get("/*", (req, res) => {
-    res.sendFile(join(__dirname, "test", "index.html"));
+    res.sendFile(join(__dirname, "app", "index.html"));
 })
 
 app.listen(port, () => {
