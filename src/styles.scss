@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./ui/style/button.scss";
+@import "./ui/style/form.scss";
+@import "./ui/style/buttonGroup.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+svg.logo,
+img.logo {
+    width: 25px;
+    height: 25px;
+}
+body,
+html {
+    user-select: none;
+    height: 100%;
+}
