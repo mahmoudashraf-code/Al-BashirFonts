@@ -5,7 +5,7 @@ let port = 3000 || process.env.PORT;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("dist"));
+app.use(express.static("test"));
 app.use("/api/blog", require("./router/blog"));
 
 
