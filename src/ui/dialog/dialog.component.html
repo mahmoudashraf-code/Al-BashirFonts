@@ -1,0 +1,20 @@
+<dialog #ele>
+    <div id="body">
+        <header>
+            <h2>
+                <ng-content select="bashir-ui-dialog-title"></ng-content>
+            </h2>
+            <svg (click)="close.emit()" viewBox="0 0 512 512" class="logo">
+                <path
+                    d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z">
+                </path>
+            </svg>
+        </header>
+        <section>
+            <ng-content select="bashir-ui-dialog-body"></ng-content>
+        </section>
+        <footer>
+            <ng-content select="bashir-ui-dialog-footer"></ng-content>
+        </footer>
+    </div>
+</dialog>

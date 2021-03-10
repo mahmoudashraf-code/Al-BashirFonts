@@ -1,0 +1,31 @@
+ul {
+    font-size: 20px;
+    color: #00000070;
+    margin: 10px;
+    li {
+        outline: none;
+        cursor: pointer;
+        padding: 0 10px;
+        display: inline-block;
+        &:hover {
+            color: black;
+            border-bottom: 2px solid;
+        }
+        &.active {
+            border-bottom: 2px solid;
+            color: black;
+        }
+    }
+    &.white {
+        color: #ffffffd4;
+        margin: 5px 0 0 10px;
+        li {
+            &:hover {
+                color: white !important;
+            }
+            &.active {
+                color: white !important;
+            }
+        }
+    }
+}

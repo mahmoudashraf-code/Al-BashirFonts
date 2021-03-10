@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginModule } from './login/login.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { LoginModule } from './login/login.module';
     NotFoundComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    LoginModule
+    LoginModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

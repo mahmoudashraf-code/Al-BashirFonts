@@ -1,0 +1,19 @@
+.formItem {
+    display: flex;
+    border: 1px solid #d9e1e1bd;
+    margin: 7px 0;
+    input {
+        flex: 1;
+        border: none;
+        font-weight: bold;
+        outline: none;
+        padding: 3px;
+    }
+    label {
+        background: #b4c0c9;
+        padding: 3px;
+        width: 73px;
+        text-align: center;
+        box-shadow: 0 0 2px;
+    }
+}

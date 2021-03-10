@@ -1,0 +1,20 @@
+#bloger {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    header {
+        background-color: #0f756b;
+        color: white;
+        box-shadow: 0 0 3px black;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        h2 {
+            padding: 3px;
+            margin-left: 2px;
+        }
+    }
+    section {
+        overflow: hidden;
+        padding: 3px;
+    }
+}

@@ -1,0 +1,31 @@
+.button {
+    font-family: Roboto, sans-serif;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 1px 6px rgb(57 73 76 / 25%);
+    color: #fff;
+    width: 100px;
+    background-color: #359900;
+    &:hover {
+        background-color: #008329;
+    }
+    &:active {
+        background-color: #008329;
+        box-shadow: 0 0 #666;
+        transform: translateY(1px);
+    }
+    &.danger {
+        background-color: #9b2017;
+        &:active {
+            background-color: #ac2015;
+        }
+        &:hover {
+            background-color: #ac2015;
+        }
+    }
+}

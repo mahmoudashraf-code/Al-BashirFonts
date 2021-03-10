@@ -1,0 +1,16 @@
+<bashir-ui-dialog (closeDialog)="close()">
+    <bashir-ui-dialog-title>Login</bashir-ui-dialog-title>
+    <bashir-ui-dialog-body>
+        <bashir-ui-list [data]="data"></bashir-ui-list>
+        <div style="padding: 10px;">
+            <app-sign-in *ngIf="page=='signIn'"></app-sign-in>
+            <app-sign-up *ngIf="page=='signUp'"></app-sign-up>
+        </div>
+    </bashir-ui-dialog-body>
+    <bashir-ui-dialog-footer>
+        <div dir="rtl">
+            <button class="button" (click)="login()">Sign</button>
+            <button class="button danger" (click)="close()" style="margin-right: 2px;">Cancel</button>
+        </div>
+    </bashir-ui-dialog-footer>
+</bashir-ui-dialog>

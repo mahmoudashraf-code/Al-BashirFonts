@@ -5,15 +5,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "Al-BashirStudio",
+    redirectTo: "Al-bashirStudio",
     pathMatch: "full"
   },
   {
-    path: "Al-BashirStudio",
+    path: "Al-bashirStudio",
     loadChildren: () => import("./pages/studio/studio.module").then(m => m.StudioModule)
   },
   {
-    path: "Al-BashirFonts",
+    path: "Al-bashirFonts",
     loadChildren: () => import("./pages/fonts/fonts.module").then(m => m.FontsModule)
   },
   {
@@ -23,7 +23,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
