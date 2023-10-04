@@ -8,4 +8,7 @@ import { AppService } from '../app.service';
 })
 export class NotFoundComponent {
   constructor(public app: AppService) { }
+  back() {
+    history.back()
+  }
 }

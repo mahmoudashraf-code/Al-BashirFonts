@@ -5,21 +5,17 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "Al-bashirStudio",
-    pathMatch: "full"
+    loadChildren: () => import("./fonts/fonts.module").then(m => m.FontsModule)
   },
   {
-    path: "Al-bashirStudio",
-    loadChildren: () => import("./pages/studio/studio.module").then(m => m.StudioModule)
-  },
-  {
-    path: "Al-bashirFonts",
-    loadChildren: () => import("./pages/fonts/fonts.module").then(m => m.FontsModule)
+    path: "404",
+    component: NotFoundComponent
   },
   {
     path: "**",
-    component: NotFoundComponent
-  }
+    redirectTo: "404",
+    pathMatch: "full",
+  },
 ];
 
 @NgModule({

@@ -1,27 +1,52 @@
-# AlBashirProfile
+# Al-Bashir 🌴💛._チ𝓸ₙԵȿ_.💛🌴
+This is a web app built using Angular For fonts.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+## Start to use Fonts
+- Go to https://al-bashir-fonts.vercel.app/
+- import css file and (☉｡☉)!→ᴳõ🔥
 
-## Development server
+## Screenshots
+![App Screenshot](./screenshot/home.png)
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Requirements
+- Node.js v16 or higher
+- Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
+-  Clone this repository:
 
-## Build
+```bash
+  git clone https://github.com/mahmoudashraf-code/Al-BashirFonts.git
+  cd Al-BashirWebBuilder
+```
+- Install dependencies:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+  npm i
+```
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Usage
+-  Start the app:
+```bash
+  npm run start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Open a web browser and go to http://localhost:4200
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Security
+This app does not store any of your personal information. All communication between the client and server is encrypted over HTTPS.
+
+
+## Troubleshooting
+If you are having any problems with this app, please open an issue on GitHub.
+
+
+## License
+This app is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+

@@ -6,15 +6,17 @@ import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
-import { existsSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
+
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   let distFolder: string;
-  // distFolder = join(process.cwd(), 'server/app/browser');
-  distFolder = join(process.cwd(), 'app/browser');
+  distFolder = join(process.cwd(), 'server/app/browser');
+  // distFolder = join(process.cwd(), 'app/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -23,12 +25,11 @@ export function app(): express.Express {
 
   server.set('view engine', 'html');
   server.set('views', distFolder);
-  server.use(express.json());
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
-
   // Serve static files from /browser
+
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
@@ -60,5 +61,4 @@ const moduleFilename = mainModule && mainModule.filename || '';
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }
-
 export * from './src/main.server';
