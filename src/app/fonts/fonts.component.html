@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
                                 <div class="font-actions">
-                                    <p-button icon="pi pi-eye" label="Preview" (click)="display=true; selectEle=font"
+                                    <p-button icon="pi pi-eye" label="Preview" (click)="openPreview(font)"
                                         styleClass="p-button-primary">
                                     </p-button>
                                     <p-button icon="pi pi-copy" pTooltip="Copy CSS class"
@@ -104,7 +104,7 @@
                                     <span class="font-filename font-filename-compact">{{font.name}}</span>
                                 </div>
                                 <div class="font-actions font-actions-compact">
-                                    <p-button icon="pi pi-eye" (click)="display=true; selectEle=font"
+                                    <p-button icon="pi pi-eye" (click)="openPreview(font)"
                                         styleClass="p-button-primary p-button-sm compact-btn" pTooltip="Preview Font"
                                         tooltipPosition="top">
                                     </p-button>
@@ -121,64 +121,10 @@
         </div>
 
         <!-- Font Preview Modal -->
-        <p-dialog [header]="'Font Preview: ' + (selectEle?.displayName || '')" [(visible)]="display"
-            [style]="{width: '90vw', maxWidth: '1000px'}" [modal]="true" [resizable]="false" [draggable]="false"
-            (onHide)="selectEle=undefined" styleClass="font-preview-dialog">
-
-            <div class="preview-content" *ngIf="selectEle">
-                <div class="preview-showcase">
-                    <div class="size-large" [ngStyle]="{'font-family': selectEle.att}">
-                        Elegant Typography Design
-                    </div>
-                    <div class="size-large-ar" [ngStyle]="{'font-family': selectEle.att}">
-                        تصميم طباعي أنيق ومتميز
-                    </div>
-
-                    <div class="preview-samples">
-                        <div class="sample-group">
-                            <h4>English Sample</h4>
-                            <p class="sample-text" [ngStyle]="{'font-family': selectEle.att}">
-                                The quick brown fox jumps over the lazy dog. This pangram contains every letter of the
-                                English alphabet at least once. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
-                                1234567890 !@#$%^&*()
-                            </p>
-                        </div>
-
-                        <div class="sample-group">
-                            <h4>Arabic Sample</h4>
-                            <p class="sample-text" [ngStyle]="{'font-family': selectEle.att}">
-                                هذا نص تجريبي باللغة العربية لعرض جمال الخط وأناقته في التصاميم المختلفة. يمكن استخدام
-                                هذا الخط في المشاريع الإبداعية والتطبيقات الحديثة. أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
-                                ١٢٣٤٥٦٧٨٩٠
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="css-usage">
-                    <div class="usage-header">
-                        <h4>CSS Usage</h4>
-                        <p-button icon="pi pi-copy" label="Copy"
-                            (click)="copyToClipboard('font-family: ' + selectEle.att + ';')"
-                            styleClass="p-button-outlined p-button-sm">
-                        </p-button>
-                    </div>
-                    <div class="usage-code">
-                        <code>font-family: '{{selectEle.att}}';</code>
-                    </div>
-                </div>
-            </div>
-
-            <ng-template pTemplate="footer">
-                <div class="dialog-footer">
-                    <p-button icon="pi pi-times" label="Close Preview" (click)="display=false"
-                        styleClass="p-button-outlined">
-                    </p-button>
-                    <p-button icon="pi pi-download" label="Use This Font" styleClass="p-button-primary">
-                    </p-button>
-                </div>
-            </ng-template>
-        </p-dialog>
+        <app-preview-modal 
+            [(visible)]="display" 
+            [selectedFont]="selectEle">
+        </app-preview-modal>
 
         <!-- Add Footer -->
         <app-footer></app-footer>

@@ -1,0 +1,58 @@
+<p-dialog [header]="'Font Preview: ' + (selectedFont?.displayName || '')" [(visible)]="visible"
+    [style]="{width: '90vw', maxWidth: '1000px'}" [modal]="true" [resizable]="false" [draggable]="false"
+    (onHide)="onClose()" styleClass="font-preview-dialog">
+
+    <div class="preview-content" *ngIf="selectedFont">
+        <div class="preview-showcase">
+            <div class="size-large" [ngStyle]="{'font-family': selectedFont.att}">
+                Elegant Typography Design
+            </div>
+            <div class="size-large-ar" [ngStyle]="{'font-family': selectedFont.att}">
+                تصميم طباعي أنيق ومتميز
+            </div>
+
+            <div class="preview-samples">
+                <div class="sample-group">
+                    <h4>English Sample</h4>
+                    <p class="sample-text" [ngStyle]="{'font-family': selectedFont.att}">
+                        The quick brown fox jumps over the lazy dog. This pangram contains every letter of the
+                        English alphabet at least once. ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
+                        1234567890 !@#$%^&*()
+                    </p>
+                </div>
+
+                <div class="sample-group">
+                    <h4>Arabic Sample</h4>
+                    <p class="sample-text" [ngStyle]="{'font-family': selectedFont.att}">
+                        هذا نص تجريبي باللغة العربية لعرض جمال الخط وأناقته في التصاميم المختلفة. يمكن استخدام
+                        هذا الخط في المشاريع الإبداعية والتطبيقات الحديثة. أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
+                        ١٢٣٤٥٦٧٨٩٠
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="css-usage">
+            <div class="usage-header">
+                <h4>CSS Usage</h4>
+                <p-button icon="pi pi-copy" label="Copy"
+                    (click)="copyToClipboard('font-family: ' + selectedFont.att + ';')"
+                    styleClass="p-button-outlined p-button-sm">
+                </p-button>
+            </div>
+            <div class="usage-code">
+                <code>font-family: '{{selectedFont.att}}';</code>
+            </div>
+        </div>
+    </div>
+
+    <ng-template pTemplate="footer">
+        <div class="dialog-footer">
+            <p-button icon="pi pi-times" label="Close Preview" (click)="onClose()"
+                styleClass="p-button-outlined">
+            </p-button>
+            <p-button icon="pi pi-download" label="Use This Font" styleClass="p-button-primary">
+            </p-button>
+        </div>
+    </ng-template>
+</p-dialog>

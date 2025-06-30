@@ -1,0 +1,128 @@
+
+:host ::ng-deep {
+    .font-preview-dialog {
+        .p-dialog-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-bottom: none;
+            padding: 1.5rem;
+
+            .p-dialog-title {
+                font-weight: 600;
+            }
+        }
+
+        .p-dialog-content {
+            background: var(--surface);
+            padding: 2rem;
+
+            .preview-content {
+                .preview-showcase {
+                    text-align: center;
+                    margin-bottom: 2rem;
+
+                    .size-large {
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        color: var(--text-primary);
+                        margin-bottom: 1rem;
+                        line-height: 1.2;
+                    }
+
+                    .size-large-ar {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: var(--primary-color);
+                        margin-bottom: 2rem;
+                        line-height: 1.3;
+                    }
+
+                    .preview-samples {
+                        display: grid;
+                        gap: 2rem;
+                        text-align: left;
+
+                        .sample-group {
+                            h4 {
+                                font-size: 1rem;
+                                font-weight: 600;
+                                color: var(--text-secondary);
+                                margin-bottom: 1rem;
+                                text-transform: uppercase;
+                                letter-spacing: 0.05em;
+                            }
+
+                            .sample-text {
+                                font-size: 1.125rem;
+                                line-height: 1.7;
+                                color: var(--text-primary);
+                                background: var(--background);
+                                padding: 1.5rem;
+                                border-radius: var(--border-radius);
+                                border: 1px solid var(--border-color);
+                            }
+                        }
+                    }
+                }
+
+                .css-usage {
+                    background: var(--background);
+                    border: 1px solid var(--border-color);
+                    border-radius: var(--border-radius);
+                    padding: 1.5rem;
+
+                    .usage-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 1rem;
+
+                        h4 {
+                            font-size: 1rem;
+                            font-weight: 600;
+                            color: var(--text-primary);
+                            margin: 0;
+                        }
+                    }
+
+                    .usage-code {
+                        background: var(--surface);
+                        border: 1px solid var(--border-color);
+                        border-radius: var(--border-radius-sm);
+                        padding: 1rem;
+
+                        code {
+                            font-family: 'Monaco', 'Menlo', monospace;
+                            font-size: 0.875rem;
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .dialog-footer {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+    }
+
+    .p-button {
+        border-radius: var(--border-radius-sm);
+        font-weight: 600;
+        transition: var(--transition);
+        border: 2px solid transparent;
+
+        &.p-button-outlined {
+            border-color: var(--border-color);
+            color: var(--text-primary);
+
+            &:hover {
+                background: var(--background);
+                border-color: var(--primary-color);
+                color: var(--primary-color);
+            }
+        }
+    }
+}

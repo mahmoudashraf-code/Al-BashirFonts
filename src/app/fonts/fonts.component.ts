@@ -55,6 +55,11 @@ export class FontsComponent implements OnInit {
     });
   }
 
+  openPreview(font: any): void {
+    this.selectEle = font;
+    this.display = true;
+  }
+
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
     this.isScrolled = window.scrollY > 50;
