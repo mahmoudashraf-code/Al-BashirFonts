@@ -14,7 +14,7 @@
     "prerender": "ng run Al-BashirProfile:prerender"
   },
   "engines": {
-    "node": "16.x"
+    "node": "20.x"
   },
   "private": true,
   "dependencies": {
