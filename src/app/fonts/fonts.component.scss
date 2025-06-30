@@ -171,6 +171,7 @@
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 
     .search-container {
         flex: 1;
@@ -472,5 +473,10 @@
         .size-large-ar {
             font-size: 1.5rem;
         }
+    }
+
+    .fonts-grid-section {
+        padding: 0;
+
     }
 }
