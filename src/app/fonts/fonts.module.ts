@@ -8,11 +8,12 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
 import { FooterComponent } from './footer/footer.component';
-
+import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { PreviewModalComponent } from './preview-modal/preview-modal.component';
 
 
 @NgModule({
-  declarations: [FontsComponent, FooterComponent],
+  declarations: [FontsComponent, FooterComponent, HeroSectionComponent, PreviewModalComponent],
   imports: [
     CommonModule,
     DataViewModule,

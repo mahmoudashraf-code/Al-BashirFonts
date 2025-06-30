@@ -1,0 +1,38 @@
+<div class="hero-section">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class="pi pi-star-fill"></i>
+            <span>Premium Collection</span>
+        </div>
+        <h1 class="hero-title">Discover Beautiful Typography</h1>
+        <p class="hero-subtitle">
+            Explore our meticulously curated collection of {{fontCount}}+ premium fonts.
+            Perfect for modern web applications, branding, and creative projects.
+        </p>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">{{fontCount}}+</span>
+                <span class="stat-label">Font Families</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">Arabic & Latin</span>
+                <span class="stat-label">Script Support</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">Web Ready</span>
+                <span class="stat-label">CSS Integration</span>
+            </div>
+        </div>
+        <div class="import-showcase">
+            <div class="import-header">
+                <h3>Quick Start - Add to your CSS</h3>
+                <p-button icon="pi pi-copy" label="Copy" (click)="copyToClipboard(cssLink)"
+                    styleClass="p-button-outlined p-button-sm">
+                </p-button>
+            </div>
+            <div class="import-code">
+                <code>@import url('{{cssLink}}');</code>
+            </div>
+        </div>
+    </div>
+</div>
