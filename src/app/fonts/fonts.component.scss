@@ -98,6 +98,8 @@
         overflow: auto;
         padding: 0;
         background: var(--background);
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -344,8 +346,8 @@
     padding: 2rem;
     max-width: 1200px;
     background-color: white;
-
     margin: 0 auto;
+    flex: 1; // Take remaining space
 
     :host ::ng-deep .modern-dataview {
         .p-dataview-header {

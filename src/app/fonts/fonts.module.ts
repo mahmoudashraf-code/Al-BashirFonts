@@ -7,11 +7,12 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [FontsComponent],
+  declarations: [FontsComponent, FooterComponent],
   imports: [
     CommonModule,
     DataViewModule,
