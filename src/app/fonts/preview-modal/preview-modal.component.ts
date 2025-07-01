@@ -20,7 +20,7 @@ export class PreviewModalComponent implements OnInit {
   onClose(): void {
     this.visible = false;
     this.visibleChange.emit(false);
-    this.selectedFont = undefined;
+    // this.selectedFont = undefined;
   }
 
   copyToClipboard(text: string): void {
