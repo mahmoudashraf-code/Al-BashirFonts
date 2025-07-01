@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { FontsService } from './fonts.service';
 import { x } from "./font"
 
 @Component({
@@ -14,7 +15,10 @@ export class FontsComponent implements OnInit {
   display: boolean = false;
   isScrolled: boolean = false;
 
-  constructor(public app: AppService) { }
+  constructor(
+    public app: AppService,
+    private fontsService: FontsService
+  ) { }
 
   ngOnInit(): void {
     this.app.title.setTitle("Motanamy Font Library - Premium Arabic & English Typography Collection");
@@ -53,6 +57,10 @@ export class FontsComponent implements OnInit {
   openPreview(font: any): void {
     this.selectEle = font;
     this.display = true;
+  }
+
+  downloadFont(font: any): void {
+    this.fontsService.downloadFont(font.name);
   }
 
   @HostListener('window:scroll', ['$event'])

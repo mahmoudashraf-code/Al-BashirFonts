@@ -26,9 +26,11 @@
         <div class="import-showcase">
             <div class="import-header">
                 <h3>Quick Start - Add to your CSS</h3>
-                <p-button icon="pi pi-copy" label="Copy" (click)="copyToClipboard(cssLink)"
-                    styleClass="p-button-outlined p-button-sm">
-                </p-button>
+                <div class="import-actions">
+                    <p-button icon="pi pi-copy" label="Copy" (click)="copyToClipboard(cssLink)"
+                        styleClass="p-button-outlined p-button-sm">
+                    </p-button>
+                </div>
             </div>
             <div class="import-code">
                 <code>@import url('{{cssLink}}');</code>

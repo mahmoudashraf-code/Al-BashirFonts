@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FontsService } from '../fonts.service';
 
 @Component({
   selector: 'app-preview-modal',
@@ -11,7 +12,7 @@ export class PreviewModalComponent implements OnInit {
   @Output() visibleChange = new EventEmitter<boolean>();
   @Output() fontSelected = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(private fontsService: FontsService) { }
 
   ngOnInit(): void {
   }
@@ -28,5 +29,11 @@ export class PreviewModalComponent implements OnInit {
     }).catch(err => {
       console.error('Failed to copy: ', err);
     });
+  }
+
+  downloadFont(): void {
+    if (this.selectedFont) {
+      this.fontsService.downloadFont(this.selectedFont.name);
+    }
   }
 }

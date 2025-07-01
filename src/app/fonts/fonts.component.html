@@ -77,6 +77,9 @@
                                     <p-button icon="pi pi-eye" label="Preview" (click)="openPreview(font)"
                                         styleClass="p-button-primary">
                                     </p-button>
+                                    <p-button icon="pi pi-download" label="Download" (click)="downloadFont(font)"
+                                        styleClass="p-button-success">
+                                    </p-button>
                                     <p-button icon="pi pi-copy" pTooltip="Copy CSS class"
                                         (click)="copyToClipboard('font-family: ' + font.att)"
                                         styleClass="p-button-outlined">
@@ -106,6 +109,10 @@
                                 <div class="font-actions font-actions-compact">
                                     <p-button icon="pi pi-eye" (click)="openPreview(font)"
                                         styleClass="p-button-primary p-button-sm compact-btn" pTooltip="Preview Font"
+                                        tooltipPosition="top">
+                                    </p-button>
+                                    <p-button icon="pi pi-download" (click)="downloadFont(font)"
+                                        styleClass="p-button-success p-button-sm compact-btn" pTooltip="Download Font"
                                         tooltipPosition="top">
                                     </p-button>
                                     <p-button icon="pi pi-copy" (click)="copyToClipboard('font-family: ' + font.att)"

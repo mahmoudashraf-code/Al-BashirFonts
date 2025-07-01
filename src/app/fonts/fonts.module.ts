@@ -10,6 +10,7 @@ import { CardModule } from 'primeng/card';
 import { FooterComponent } from './footer/footer.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { PreviewModalComponent } from './preview-modal/preview-modal.component';
+import { FontsService } from './fonts.service';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { PreviewModalComponent } from './preview-modal/preview-modal.component';
         component: FontsComponent
       }
     ])
-  ]
+  ],
+  providers: [FontsService]
 })
 export class FontsModule { }
