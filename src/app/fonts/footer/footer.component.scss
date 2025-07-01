@@ -72,7 +72,96 @@
         line-height: 1.6;
         font-size: 0.9rem;
         max-width: 400px;
-        margin: 0 auto;
+        margin: 0 auto 2rem auto;
+      }
+
+      // GitHub Button Styles
+      .github-section {
+        margin-top: 2rem;
+
+        .github-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.75rem;
+          background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%);
+          color: white;
+          text-decoration: none;
+          padding: 0.875rem 1.5rem;
+          border-radius: 12px;
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          font-weight: 600;
+          font-size: 0.875rem;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+          }
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #2d333a 0%, #24292e 100%);
+
+            &::before {
+              left: 100%;
+            }
+
+            .github-icon {
+              transform: rotate(360deg);
+            }
+
+            .github-stars {
+              transform: translateX(2px);
+            }
+          }
+
+          .github-icon {
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            flex-shrink: 0;
+          }
+
+          .github-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.125rem;
+
+            .github-label {
+              font-weight: 600;
+              color: white;
+            }
+
+            .github-stars {
+              font-size: 0.75rem;
+              color: #fbbf24;
+              transition: transform 0.3s ease;
+              font-weight: 500;
+            }
+          }
+
+          // Mobile responsiveness
+          @media (max-width: 480px) {
+            padding: 0.75rem 1.25rem;
+            font-size: 0.8rem;
+
+            .github-text {
+              .github-stars {
+                font-size: 0.7rem;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -132,6 +221,17 @@
 
     .footer-content {
       padding: 2rem 0;
+
+      .footer-brand {
+        .github-section {
+          .github-button {
+            .github-text {
+              align-items: center;
+              text-align: center;
+            }
+          }
+        }
+      }
     }
 
     .footer-bottom {
